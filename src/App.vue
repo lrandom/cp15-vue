@@ -1,18 +1,34 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+   <div>
+       <div v-for="(item,index) in list" :key="index">
+           {{item}}
+       </div>
+
+       <input v-model="input"/>
+       <div @click="callMe()">Call me</div>
+   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+   data:function(){
+       return {
+           message: "Hello",
+           list:[1,2,3,4,5,6],
+           input:""
+       }
+   },
+    mounted() {
+      setTimeout(()=>{
+          this.list.push(2);
+          this.list.push(3);
+      },5000)
+   },
+    methods:{
+       callMe(){
+           alert(this.input);
+       }
+    }
 }
 </script>
 
