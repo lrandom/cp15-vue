@@ -1,8 +1,5 @@
 export const config = {
-    base_url:"http://example.com"
+    baseUrl:"http://newsapi.org/v2/"
 };
 
-export const constant = {
-    NAME:"NIIT"
-}
 

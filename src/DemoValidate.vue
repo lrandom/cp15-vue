@@ -34,6 +34,10 @@ export default {
                 return item > 2;
             })
         }
+    },
+    mounted() {
+        alert(this.$route.query.name);
+        alert(this.$route.params.id);
     }
 }
 </script>
