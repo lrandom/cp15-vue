@@ -1,7 +1,7 @@
-import Axios from 'axios';
+import axios from 'axios';
 import {config} from '@/config/config';
 import constants from "@/config/constant";
-const AxiosInstance = new Axios(
+const AxiosInstance = axios.create(
     {
         baseUrl: config.baseUrl,
         timeOut: 1000
